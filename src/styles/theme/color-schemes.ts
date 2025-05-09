@@ -1,0 +1,141 @@
+import type { ColorSystemOptions } from '@mui/material/styles';
+
+import { error, secondary, success, fourth, warning } from './colors';
+import type { ColorScheme } from './types';
+
+export const colorSchemes = {
+  // dark: {
+  //   palette: {
+  //     action: { disabledBackground: 'rgba(0, 0, 0, 0.12)' },
+  //     background: {
+  //       default: 'var(--mui-palette-neutral-950)',
+  //       defaultChannel: '9 10 11',
+  //       paper: 'var(--mui-palette-neutral-900)',
+  //       paperChannel: '19 78 72',
+  //       level1: 'var(--mui-palette-neutral-800)',
+  //       level2: 'var(--mui-palette-neutral-700)',
+  //       level3: 'var(--mui-palette-neutral-600)',
+  //     },
+  //     common: { black: '#000000', white: '#ffffff' },
+  //     divider: 'var(--mui-palette-neutral-700)',
+  //     dividerChannel: '50 56 62',
+  //     error: {
+  //       ...error,
+  //       light: error[300],
+  //       main: error[400],
+  //       dark: error[500],
+  //       contrastText: 'var(--mui-palette-common-black)',
+  //     },
+  //     info: {
+  //       ...secondary,
+  //       light: secondary[300],
+  //       main: secondary[400],
+  //       dark: secondary[500],
+  //       contrastText: 'var(--mui-palette-common-black)',
+  //     },
+  //     neutral: { ...secondary },
+  //     primary: {
+  //       ...primary,
+  //       light: primary[300],
+  //       main: primary[400],
+  //       dark: primary[500],
+  //       contrastText: 'var(--mui-palette-common-black)',
+  //     },
+  //     secondary: {
+  //       ...secondary,
+  //       light: secondary[100],
+  //       main: secondary[200],
+  //       dark: secondary[300],
+  //       contrastText: 'var(--mui-palette-common-black)',
+  //     },
+  //     success: {
+  //       ...success,
+  //       light: success[300],
+  //       main: success[400],
+  //       dark: success[500],
+  //       contrastText: 'var(--mui-palette-common-black)',
+  //     },
+  //     text: {
+  //       primary: 'var(--mui-palette-neutral-100)',
+  //       primaryChannel: '240 244 248',
+  //       secondary: 'var(--mui-palette-neutral-400)',
+  //       secondaryChannel: '159 166 173',
+  //       disabled: 'var(--mui-palette-neutral-600)',
+  //     },
+  //     warning: {
+  //       ...tertiary,
+  //       light: tertiary[300],
+  //       main: tertiary[400],
+  //       dark: tertiary[500],
+  //       contrastText: 'var(--mui-palette-common-black)',
+  //     },
+  //   },
+  // },
+  light: {
+    palette: {
+      action: { disabledBackground: 'rgba(0, 0, 0, 0.06)' },
+      background: {
+        default: 'var(--mui-palette-common-white)',
+        defaultChannel: '255 255 255',
+        paper: 'var(--mui-palette-common-white)',
+        paperChannel: '255 255 255',
+        level1: 'var(--mui-palette-neutral-50)',
+        level2: 'var(--mui-palette-neutral-100)',
+        level3: 'var(--mui-palette-neutral-200)',
+      },
+      common: { black: '#000000', white: '#ffffff' },
+      divider: 'var(--mui-palette-neutral-200)',
+      dividerChannel: '220 223 228',
+      error: {
+        ...error,
+        light: error[400],
+        main: error[500],
+        dark: error[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      info: {
+        ...fourth,
+        light: fourth[400],
+        main: fourth[500],
+        dark: fourth[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      neutral: { ...secondary },
+      primary: {
+        ...secondary,
+        light: secondary[400],
+        main: secondary[500],
+        dark: secondary[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      secondary: {
+        ...secondary,
+        light: secondary[600],
+        main: secondary[700],
+        dark: secondary[800],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      success: {
+        ...success,
+        light: success[400],
+        main: success[500],
+        dark: success[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+      text: {
+        primary: 'var(--mui-palette-neutral-900)',
+        primaryChannel: '33 38 54',
+        secondary: 'var(--mui-palette-neutral-500)',
+        secondaryChannel: '102 112 133',
+        disabled: 'gray',
+      },
+      warning: {
+        ...warning,
+        light: warning[400],
+        main: warning[500],
+        dark: warning[600],
+        contrastText: 'var(--mui-palette-common-white)',
+      },
+    },
+  },
+} satisfies Partial<Record<ColorScheme, ColorSystemOptions>>;
