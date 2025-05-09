@@ -152,7 +152,7 @@ export default function CustomersTable({
       await navigator.clipboard.writeText(text);
       _toast('Texto copiado al portapapeles', 'success');
     } catch (err) {
-      _toast('Error al copiar documento','error')
+      _toast('Error al copiar cédula','error')
     }
   },[_toast])
   
@@ -168,7 +168,7 @@ export default function CustomersTable({
             <TableRow>
             <TableCell>Creado</TableCell>
               <TableCell>Nombre y apellido</TableCell>
-              <TableCell>Documento</TableCell>
+              <TableCell>Cédula</TableCell>
               <TableCell>Fecha de nacimiento</TableCell>
               <TableCell>Telefono</TableCell>
               <TableCell>Email</TableCell>
@@ -217,7 +217,7 @@ export default function CustomersTable({
     <ConfirmActionDialog
         open={open}
         title="Eliminar paciente"
-        message="¿Estas seguro que deseas eliminar a este paciente?"
+        message="¿Estas seguro médico que deseas eliminar a este paciente?"
         onClose={() => {setOpen(false)}}
         actions={[
           { label: 'Cancelar', onClick: () => {setOpen(false)} },

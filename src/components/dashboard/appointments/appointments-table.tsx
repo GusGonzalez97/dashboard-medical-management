@@ -145,7 +145,7 @@ export function MedicalAppointmentsTable({
               <TableRow>
                 <TableCell>Fecha de turno</TableCell>
                 <TableCell>Paciente</TableCell>
-                <TableCell>Documento</TableCell>
+                <TableCell>Cédula</TableCell>
                 <TableCell>Sucursal</TableCell>
                 <TableCell>Motivo</TableCell>
                 <TableCell>Practica</TableCell>

@@ -23,9 +23,9 @@ function PatientForm({ patient, setPatient }: PatientFormProps): React.JSX.Eleme
         <TextField
                 fullWidth
                 required
-                label="Documento"
+                label="Cédula"
                 variant="outlined"
-                placeholder="DNI del paciente"
+                placeholder="Cédula del paciente"
                 value={patient.documentNumber}
                 onChange={(e) => { setPatient({ ...patient, documentNumber: e.target.value }) }}
                 margin="dense"
@@ -86,7 +86,7 @@ function PatientForm({ patient, setPatient }: PatientFormProps): React.JSX.Eleme
                 fullWidth
                 select
                 margin="dense"
-                label="Obra social"
+                label="Seguro Médico"
                 value={patient.healthInsuranceName || ""}
                 onChange={(e) => {
                     setPatient({

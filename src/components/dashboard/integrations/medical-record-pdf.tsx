@@ -85,12 +85,12 @@ function MedicalRecordPDF( {data} : MedicalRecordPDFProps): React.JSX.Element {
               <View style={styles.divider} />
             </View>
             <View style={styles.gridItem}>
-              <Text style={styles.label}>DNI:</Text>
+              <Text style={styles.label}>Cédula:</Text>
               <Text style={styles.value}>{data?.patient?.documentNumber ?? 'No especificado'}</Text>
               <View style={styles.divider} />
             </View>
             <View style={styles.gridItem}>
-              <Text style={styles.label}>Obra Social:</Text>
+              <Text style={styles.label}>Seguro Médico:</Text>
               <Text style={styles.value}>{data?.patient?.healthInsurance?.healthInsuranceName ?? 'No especificado'}</Text>
               <View style={styles.divider} />
             </View>

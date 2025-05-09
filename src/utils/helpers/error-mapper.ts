@@ -4,7 +4,7 @@ export function handleError(errorCode: string):{message:string}{
     FILE_REQUIRED: { message: "Debe adjuntar al menos un archivo." },
     BRANCH_NOT_FOUND: { message: "Sucursal no encontrada. Verifique los datos ingresados." },
     PATIENT_NOT_FOUND: { message: "Paciente no encontrado en el sistema." },
-    PATIENT_EXISTS:{message:'Ya existe un paciente con ese número de documento'},
+    PATIENT_EXISTS:{message:'Ya existe un paciente con ese número de cédula'},
     UNAUTHORIZED: { message: "No tiene permisos para realizar esta acción." },
     SERVER_ERROR: { message: "Ocurrió un error en el servidor. Intente nuevamente más tarde." },
     BRANCH_NOT_AVAILABLE: { message: "La sucursal no esta disponible en ese dia u horario" },

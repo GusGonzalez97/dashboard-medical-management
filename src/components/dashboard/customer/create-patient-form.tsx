@@ -7,7 +7,6 @@ import { z } from "zod";
 import React, { useCallback, useEffect, useState } from "react";
 import { cities } from "@/utils/labels";
 import { healthInsuranceList, patologyList } from "@/utils/mocks/medical-records";
-import { HealthInsuranceEnum } from "@/types/medical-record";
 import { PatientServices } from "@/services/patient/patient-services";
 import { useToast } from "@/contexts/toast-provider";
 import { CityEnum, type PatientI, type FormValues } from "@/types/pacient";
@@ -20,7 +19,7 @@ const schema = z.object({
   name: z.string().min(1, "El nombre es requerido"),
   lastname: z.string().min(1, "El apellido es requerido"),
   phone: z.string().min(1, "El teléfono es requerido"),
-  documentNumber: z.string().min(1, "El documento es requerido"),
+  documentNumber: z.string().min(1, "La cédula es requerido"),
   documentProcedureNumber: z.string().optional(),
   dateOfBirth: z.string().optional(),
   street: z.string().min(1, "La calle es requerida"),
@@ -39,7 +38,7 @@ const schema = z.object({
   }
   return true;
 }, {
-  message: "Debe completar la obra social y el número de afiliado",
+  message: "Debe completar la el seguro médico y el número de afiliado",
   path: ["healthInsuranceName"],
 });
 
@@ -68,7 +67,6 @@ export default function CreatePatientForm({ defaultValues, patientId }: FormProp
   });
 
   const hasHealthInsurance = watch("hasHealthInsurance");
-  const healthInsuranceSelected: HealthInsuranceEnum = watch('healthInsuranceName') as HealthInsuranceEnum
 
   useEffect(() => {
     if (!hasHealthInsurance) {
@@ -170,7 +168,7 @@ export default function CreatePatientForm({ defaultValues, patientId }: FormProp
             <Grid2 container spacing={2} rowGap={3}>
               <Grid2 size={{ xs: 6 }} ><Controller name="name" control={control} render={({ field, fieldState }) => (<TextField {...field} label="Nombre" fullWidth error={Boolean(fieldState.error)} helperText={fieldState.error?.message} />)} /></Grid2>
               <Grid2 size={{ xs: 6 }}><Controller name="lastname" control={control} render={({ field, fieldState }) => (<TextField {...field} label="Apellido" fullWidth error={Boolean(fieldState.error)} helperText={fieldState.error?.message} />)} /></Grid2>
-              <Grid2 size={{ xs: 6 }}><Controller name="documentNumber" control={control} render={({ field, fieldState }) => (<TextField {...field} label="Número de Documento" fullWidth error={Boolean(fieldState.error)} helperText={fieldState.error?.message} />)} /></Grid2>
+              <Grid2 size={{ xs: 6 }}><Controller name="documentNumber" control={control} render={({ field, fieldState }) => (<TextField {...field} label="Número de cédula" fullWidth error={Boolean(fieldState.error)} helperText={fieldState.error?.message} />)} /></Grid2>
               <Grid2 size={{ xs: 6 }}><Controller name="dateOfBirth" control={control} render={({ field, fieldState }) => (<TextField {...field} label="Fecha de Nacimiento" InputLabelProps={{ shrink: true }} type="date" fullWidth error={Boolean(fieldState.error)} helperText={fieldState.error?.message} />)} /></Grid2>
             </Grid2>
           </Grid2>
@@ -178,7 +176,7 @@ export default function CreatePatientForm({ defaultValues, patientId }: FormProp
             <Typography variant="h6" mb={3}>Dirección</Typography>
             <Grid2 container spacing={2}>
               <Grid2 size={{ xs: 6 }}><Controller name="city" control={control} render={({ field, fieldState }) => (<TextField select label="Ciudad" error={Boolean(fieldState.error)} helperText={fieldState.error?.message} fullWidth {...field}>{cities.map(option => (<MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>))}</TextField>)} /></Grid2>
-              <Grid2 size={{ xs: 6 }}><Controller name="street" control={control} render={({ field, fieldState }) => (<TextField {...field} label="Calle y número" fullWidth error={Boolean(fieldState.error)} helperText={fieldState.error?.message} />)} /></Grid2>
+              <Grid2 size={{ xs: 6 }}><Controller name="street" control={control} render={({ field, fieldState }) => (<TextField {...field} label="Dirección" fullWidth error={Boolean(fieldState.error)} helperText={fieldState.error?.message} />)} /></Grid2>
             </Grid2>
           </Grid2>
 
@@ -194,7 +192,7 @@ export default function CreatePatientForm({ defaultValues, patientId }: FormProp
             <Grid2 container spacing={2} >
               <Grid2 size={{ xs: 12, md: 12 }} >
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 5 }}>
-                  <Typography variant="h6">¿Tiene obra social?</Typography>
+                  <Typography variant="h6">¿Tiene seguro médico?</Typography>
                   <FormControlLabel
                     control={
                       <Controller
@@ -218,7 +216,7 @@ export default function CreatePatientForm({ defaultValues, patientId }: FormProp
                       render={({ field, fieldState }) => (
                         <TextField
                           select
-                          label="Obra Social"
+                          label="Seguro Médico"
                           fullWidth
                           {...field}
                           disabled={!hasHealthInsurance}
@@ -249,23 +247,6 @@ export default function CreatePatientForm({ defaultValues, patientId }: FormProp
                       )}
                     />
                   </Grid2>
-                  {healthInsuranceSelected === HealthInsuranceEnum.PAMI ? <Grid2 size={{ xs: 6 }}>
-                    <Controller
-                      name="documentProcedureNumber"
-                      control={control}
-                      render={({ field, fieldState }) => (
-                        <TextField
-                          {...field}
-                          label="Número de tramite de documento"
-                          type="number"
-                          fullWidth
-                          disabled={!hasHealthInsurance}
-                          error={Boolean(fieldState.error)}
-                          helperText={fieldState.error?.message}
-                        />
-                      )}
-                    />
-                  </Grid2> : null}
                 </Grid2>
               </Grid2>
             </Grid2>

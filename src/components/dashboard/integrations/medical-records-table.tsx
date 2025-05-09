@@ -89,6 +89,7 @@ export default function MedicalRecordsTable({
               }
             : filters;
         }
+
         const sortOrder = isDoctor ? 'asc' : 'desc'
         const { data } = await RecordServices.getAllRecords(
           _page,
@@ -117,7 +118,7 @@ export default function MedicalRecordsTable({
 
   React.useEffect(() => {
     const delayDebounce = setTimeout(async () => {
-      if (search.length > 3 || search.length === 0) {
+      if (search.length > 2) {
         const filters = { "patient.documentNumber": { "contains": search } };
         await fetchRecords(0, pageOptions.rowsPerPage, filters);
       }
@@ -192,7 +193,7 @@ export default function MedicalRecordsTable({
               <TableRow>
                 <TableCell>Fecha</TableCell>
                 <TableCell>Paciente</TableCell>
-                <TableCell>DNI</TableCell>
+                <TableCell>Cédula</TableCell>
                 <TableCell>Motivo de consulta</TableCell>
                 <TableCell>Estado</TableCell>
                 <TableCell>Acciones</TableCell>

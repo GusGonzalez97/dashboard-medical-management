@@ -53,27 +53,21 @@ import { StatusValueEnum } from "@/components/core/Chip/status-chip";
     retinopatia_diabetica: StatusValueEnum.INFO,
     desprendimiento_retina: StatusValueEnum.INFO,
     retina: StatusValueEnum.INFO,
-  
     queratocono: StatusValueEnum.PRIMARY, // azul - córnea
     cornea: StatusValueEnum.PRIMARY,
-  
     ojo_seco: StatusValueEnum.WARNING,
     conjuntivitis: StatusValueEnum.WARNING,
     blefaritis: StatusValueEnum.WARNING,
     estrabismo: StatusValueEnum.WARNING,
     ambliopia: StatusValueEnum.WARNING,
     daltonismo: StatusValueEnum.WARNING,
-   
     uveitis: StatusValueEnum.INFO,
     neuropatia_optica: StatusValueEnum.ERROR, // rojo - grave
-  
     retinosis_pigmentaria: StatusValueEnum.INFO,
     hemorragia_vitrea: StatusValueEnum.SECONDARY, // marrón (sangre)
     edema_macular: StatusValueEnum.INFO,
-  
     celulitis_orbitaria: StatusValueEnum.ERROR,
     parasitos: StatusValueEnum.SECONDARY,
-
     diabetes: StatusValueEnum.WARNING, // condición sistémica, no directamente ocular
     hipertension: StatusValueEnum.WARNING, // similar a diabetes
     hipermetropia: StatusValueEnum.SECONDARY, // error refractivo leve
@@ -89,58 +83,26 @@ import { StatusValueEnum } from "@/components/core/Chip/status-chip";
   };
   
 
-export const medicineList = [
-  { "value": "miopia", "label": "Miopía" },
-  { "value": "hipermetropia", "label": "Hipermetropía" },
-  { "value": "astigmatismo", "label": "Astigmatismo" },
-  { "value": "presbicia", "label": "Presbicia" },
-  { "value": "glaucoma", "label": "Glaucoma" },
-  { "value": "cataratas", "label": "Cataratas" },
-  { "value": "retinopatia_diabetica", "label": "Retinopatía diabética" },
-  { "value": "degeneracion_macular", "label": "Degeneración macular asociada a la edad (DMAE)" },
-  { "value": "queratocono", "label": "Queratocono" },
-  { "value": "uveitis", "label": "Uveítis" },
-  { "value": "conjuntivitis", "label": "Conjuntivitis" },
-  { "value": "blefaritis", "label": "Blefaritis" },
-  { "value": "queratitis", "label": "Queratitis" },
-  { "value": "sindrome_ojo_seco", "label": "Síndrome del ojo seco" }
-]
-
 export const healthInsuranceList: { value: HealthInsuranceEnum, label: string }[] = [
-  { "value": HealthInsuranceEnum.OSDE, "label": "OSDE" },
-  { "value": HealthInsuranceEnum.SWISSMEDICAL, "label": "Swiss Medical" },
-  { "value": HealthInsuranceEnum.MEDIFE, "label": "Medifé" },
-  { "value": HealthInsuranceEnum.GALENO, "label": "Galeno" },
-  { "value": HealthInsuranceEnum.HOSPITALITALIANO, "label": "Hospital Italiano Plan de Salud" },
-  { "value": HealthInsuranceEnum.OMINT, "label": "OMINT" },
-  { "value": HealthInsuranceEnum.SURA, "label": "SURA" },
-  { "value": HealthInsuranceEnum.SANCORSALUD, "label": "Sancor Salud" },
-  { "value": HealthInsuranceEnum.ACCORDSALUD, "label": "Grupo Accord Salud" },
-  { "value": HealthInsuranceEnum.PREVENCIONSALUD, "label": "Prevención Salud" },
-  { "value": HealthInsuranceEnum.OSPE, "label": "OSPE - Obra Social de Petroleros" },
-  { "value": HealthInsuranceEnum.OSPESCHA, "label": "OSPescha - Personal de Estaciones de Servicio" },
-  { "value": HealthInsuranceEnum.OSFE, "label": "OSFE - Obra Social Ferroviaria" },
-  { "value": HealthInsuranceEnum.OSSACRA, "label": "OSSACRA - Amas de Casa de Argentina" },
-  { "value": HealthInsuranceEnum.OSJERA, "label": "OSJERA - Personal Jerárquico" },
-  { "value": HealthInsuranceEnum.FEDECAMARAS, "label": "Fedecámaras" },
-  { "value": HealthInsuranceEnum.PAMI, "label": "PAMI" },
-  { "value": HealthInsuranceEnum.OSPRERA, "label": "OSPRERA" },
-  { "value": HealthInsuranceEnum.AVALIAN, "label": "Avalian" },
-  { "value": HealthInsuranceEnum.APM, "label": "APM" },
-  { "value": HealthInsuranceEnum.DASU, "label": "DASU" },
-  { "value": HealthInsuranceEnum.TVSALUD, "label": "TV Salud" },
-  { "value": HealthInsuranceEnum.JERARQUICOSALUD, "label": "Jerárquico Salud" },
-  { "value": HealthInsuranceEnum.SCIS, "label": "SCIS" },
-  { "value": HealthInsuranceEnum.IOSFA, "label": "IOSFA" },
-  { "value": HealthInsuranceEnum.VISITAR, "label": "Visitar" },
-  { "value": HealthInsuranceEnum.INTERMEDICINA, "label": "Inter Medicina" },
-  { "value": HealthInsuranceEnum.OSDOP, "label": "OSDOP" },
-  { "value": HealthInsuranceEnum.CSS, "label": "CSS" },
-  { "value": HealthInsuranceEnum.UNOSALUD, "label": "UNO Salud" },
-  { "value": HealthInsuranceEnum.VALLESALUD, "label": "Valle Salud" },
-  { "value": HealthInsuranceEnum.OSECAC, "label": "OSECAC" },
-  { "value": HealthInsuranceEnum.OSPATRONES, "label": "OSPATRONES" },
-  { "value": HealthInsuranceEnum.OSDIPP, "label": "OSDIPP" }
+  { value: HealthInsuranceEnum.SEGUROSCARACAS, label: "Seguros Caracas" },
+  { value: HealthInsuranceEnum.MAPFRE, label: "Mapfre Venezuela" },
+  { value: HealthInsuranceEnum.MULTINACIONALDESEGUROS, label: "Multinacional de Seguros" },
+  { value: HealthInsuranceEnum.SEGUROSALTAMIRA, label: "Seguros Altamira" },
+  { value: HealthInsuranceEnum.SEGUROSMERCANTIL, label: "Seguros Mercantil" },
+  { value: HealthInsuranceEnum.PIRAMIDE, label: "Seguros Pirámide" },
+  { value: HealthInsuranceEnum.UNIVERSAL, label: "Seguros Universales" },
+  { value: HealthInsuranceEnum.ASEGURADORACATATUMBO, label: "Aseguradora Catatumbo" },
+  { value: HealthInsuranceEnum.ZURICH, label: "Zurich Seguros" },
+  { value: HealthInsuranceEnum.LAPREVISORA, label: "La Previsora" },
+  { value: HealthInsuranceEnum.VENEZUELA, label: "Seguros Venezuela" },
+  { value: HealthInsuranceEnum.HORIZONTE, label: "Seguros Horizonte" },
+  { value: HealthInsuranceEnum.PROVINCIAL, label: "Seguros Provincial" },
+  { value: HealthInsuranceEnum.ORINOCO, label: "Seguros Orinoco" },
+  { value: HealthInsuranceEnum.FEDERACIONMEDICA, label: "Seguros Federación Médica Venezolana" },
+  { value: HealthInsuranceEnum.QUALITAS, label: "Qualitas Compañía de Seguros" },
+  { value: HealthInsuranceEnum.OCEANICA, label: "Seguros Oceánica" },
+  { value: HealthInsuranceEnum.BOLIVAR, label: "Seguros Bolívar" }
 ];
+
 
 

@@ -17,7 +17,7 @@ export function AppointmentsFilters({search,setSearch}:FiltersProps): React.JSX.
         value={search}
         fullWidth
         onChange={e => {setSearch(e.target.value)}}
-        placeholder="Buscar por Documento"
+        placeholder="Buscar por cédula"
         startAdornment={
           <InputAdornment position="start">
             <MagnifyingGlassIcon fontSize="var(--icon-fontSize-md)" />

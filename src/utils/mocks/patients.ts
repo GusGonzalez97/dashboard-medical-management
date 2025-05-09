@@ -20,7 +20,7 @@ export const patients = [
         },
         healthInsurance: {
             membershipNumber: 12345678,
-            healthInsuranceName: HealthInsuranceEnum.OSDE
+            healthInsuranceName: HealthInsuranceEnum.FEDERACIONMEDICA
         },
         lastMedicalRecord: {
           diagnosis: "Cataratas",
@@ -51,7 +51,7 @@ export const patients = [
       },
         healthInsurance: {
             membershipNumber: 87654321,
-            healthInsuranceName: HealthInsuranceEnum.OSDE
+            healthInsuranceName: HealthInsuranceEnum.HORIZONTE
         },
         lastMedicalRecord: {
           diagnosis: "Cataratas",
@@ -82,7 +82,7 @@ export const patients = [
       },
         healthInsurance: {
             membershipNumber: 13579246,
-            healthInsuranceName: HealthInsuranceEnum.OSDE
+            healthInsuranceName: HealthInsuranceEnum.ASEGURADORACATATUMBO
         },
         lastMedicalRecord: {
             diagnosis: "Cataratas",

@@ -14,11 +14,11 @@ export function parseMedicalRecordsToSpanish(records: MedicalRecordI[]): Record<
     'Estado': traduccionesStatus[record.status ?? ''] ?? 'Desconocido',
 
     'Nombre del paciente': `${record.patient?.name ?? ''} ${record.patient?.lastname ?? ''}`.trim() || '-',
-    'DNI del paciente': record.patient?.documentNumber ?? '-',
+    'Cédula del paciente': record.patient?.documentNumber ?? '-',
     'Fecha de nacimiento': record.patient?.dateOfBirth ?? '-',
     'Correo del paciente': record.patient?.email ?? '-',
     'Teléfono del paciente': record.patient?.phone ?? '-',
-    'Obra social': `${record.patient?.healthInsurance?.healthInsuranceName ?? '-'} (${record.patient?.healthInsurance?.membershipNumber ?? '-'})`,
+    'Seguro Médico': `${record.patient?.healthInsurance?.healthInsuranceName ?? '-'} (${record.patient?.healthInsurance?.membershipNumber ?? '-'})`,
 
     'Presión intraocular OD (ojo derecho)': record.intraocular?.rightEye ?? '-',
     'Presión intraocular OI (ojo izquierdo)': record.intraocular?.leftEye ?? '-',

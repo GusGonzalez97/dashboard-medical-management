@@ -72,15 +72,21 @@ export default function AppointmentsStatsCard ({
         <Grid2 container spacing={8} justifyContent="center">
           <Grid2 size={{xs:12,md:5}}>
             <Typography align="center" variant="h5" mb={5}>
-              Pacientes por obra social
+              Pacientes por seguro médico
             </Typography>
             <Pie data={insuranceChart} options={chartOptions} />
           </Grid2>
           <Grid2 size={{xs:12,md:5}}>
             <Typography align="center" variant="h5" mb={5}>
-              Turnos por sucursal
+              Citas por sucursal
             </Typography>
             <Pie data={appointmentsChart} options={chartOptions} />
+          </Grid2>
+          <Grid2 size={{xs:12,md:5}}>
+            <Typography align="center" variant="h5" mb={5}>
+              Turnos por estado
+            </Typography>
+            <Pie data={statusChart} options={chartOptions} />
           </Grid2>
           <Grid2 size={{xs:12,md:5}}>
             <Typography align="center" variant="h5" mb={5}>

@@ -18,8 +18,6 @@ interface PatientProps {
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
-
-
 export default function PatientProfileCard({ patient, hiddenOpthalmicData }: PatientProps): React.JSX.Element {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -34,7 +32,7 @@ export default function PatientProfileCard({ patient, hiddenOpthalmicData }: Pat
         <Grid2 container spacing={2} alignItems="start">
           <Grid2 size={{ xs: 12, md: 5 }} container spacing={2}>
             <Grid2 size={{ xs: 12 }} display="flex" gap={0.5}>
-              <Typography variant="body1" fontWeight={600}>DNI:</Typography>
+              <Typography variant="body1" fontWeight={600}>Cédula:</Typography>
               <Typography variant="body1">{Number(patient?.documentNumber).toLocaleString('es-AR')}</Typography>
             </Grid2>
             <Grid2 size={{ xs: 12 }} display="flex" gap={0.5}>
@@ -97,7 +95,7 @@ export default function PatientProfileCard({ patient, hiddenOpthalmicData }: Pat
               </Grid2>
             )}
             <Grid2 size={{ xs: 12 }} display="flex" gap={0.5}>
-              <Typography variant="body1" fontWeight={600}>{isMobile ? 'Ob. Social: ' :'Obra social:'}</Typography>
+              <Typography variant="body1" fontWeight={600}>{isMobile ? 'Seg. Médico: ' :'Seguro Médico:'}</Typography>
               <Typography variant="body1">
                 {patient?.healthInsurance?.healthInsuranceName} ({patient?.healthInsurance?.membershipNumber})
               </Typography>

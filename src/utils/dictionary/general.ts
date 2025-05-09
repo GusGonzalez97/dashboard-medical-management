@@ -5,8 +5,8 @@ import { HealthInsuranceEnum, MedicalRecordStatus, type PatologySeverity } from 
 
 
 export const branchDictionary:Mapper={
-    [CityEnum.CR]:'Comodoro Rivadavia',
-    [CityEnum.CO]:'Caleta Olivia',
+    [CityEnum.CR]:'VALENCIA',
+    [CityEnum.CO]:'CARACAS',
     default:'Comodoro Rivadavia'
 }
 
@@ -71,38 +71,22 @@ export const patologiesDictionary:Mapper= {
 };
 
 export const HealthInsuranceLabels: Record<HealthInsuranceEnum, string> = {
-  [HealthInsuranceEnum.OSDE]: "OSDE",
-  [HealthInsuranceEnum.SWISSMEDICAL]: "Swiss Medical",
-  [HealthInsuranceEnum.MEDIFE]: "Medifé",
-  [HealthInsuranceEnum.GALENO]: "Galeno",
-  [HealthInsuranceEnum.HOSPITALITALIANO]: "Hospital Italiano Plan de Salud",
-  [HealthInsuranceEnum.OMINT]: "OMINT",
-  [HealthInsuranceEnum.SURA]: "SURA",
-  [HealthInsuranceEnum.SANCORSALUD]: "Sancor Salud",
-  [HealthInsuranceEnum.ACCORDSALUD]: "Grupo Accord Salud",
-  [HealthInsuranceEnum.PREVENCIONSALUD]: "Prevención Salud",
-  [HealthInsuranceEnum.OSPE]: "OSPE - Obra Social de Petroleros",
-  [HealthInsuranceEnum.OSPESCHA]: "OSPescha - Personal de Estaciones de Servicio",
-  [HealthInsuranceEnum.OSFE]: "OSFE - Obra Social Ferroviaria",
-  [HealthInsuranceEnum.OSSACRA]: "OSSACRA - Amas de Casa de Argentina",
-  [HealthInsuranceEnum.OSJERA]: "OSJERA - Personal Jerárquico",
-  [HealthInsuranceEnum.FEDECAMARAS]: "Fedecámaras",
-  [HealthInsuranceEnum.PAMI]: "PAMI",
-  [HealthInsuranceEnum.OSPRERA]: "OSPRERA",
-  [HealthInsuranceEnum.AVALIAN]: "Avalian",
-  [HealthInsuranceEnum.APM]: "APM",
-  [HealthInsuranceEnum.DASU]: "DASU",
-  [HealthInsuranceEnum.TVSALUD]: "TV Salud",
-  [HealthInsuranceEnum.JERARQUICOSALUD]: "Jerárquico Salud",
-  [HealthInsuranceEnum.SCIS]: "SCIS",
-  [HealthInsuranceEnum.IOSFA]: "IOSFA",
-  [HealthInsuranceEnum.VISITAR]: "Visitar",
-  [HealthInsuranceEnum.INTERMEDICINA]: "Inter Medicina",
-  [HealthInsuranceEnum.OSDOP]: "OSDOP",
-  [HealthInsuranceEnum.CSS]: "CSS",
-  [HealthInsuranceEnum.UNOSALUD]: "UNO Salud",
-  [HealthInsuranceEnum.VALLESALUD]: "Valle Salud",
-  [HealthInsuranceEnum.OSECAC]: "OSECAC",
-  [HealthInsuranceEnum.OSPATRONES]: "OSPATRONES",
-  [HealthInsuranceEnum.OSDIPP]: "OSDIPP"
+  [HealthInsuranceEnum.SEGUROSCARACAS]: "Seguros Caracas",
+  [HealthInsuranceEnum.MAPFRE]: "Mapfre Venezuela",
+  [HealthInsuranceEnum.MULTINACIONALDESEGUROS]: "Multinacional de Seguros",
+  [HealthInsuranceEnum.SEGUROSALTAMIRA]: "Seguros Altamira",
+  [HealthInsuranceEnum.SEGUROSMERCANTIL]: "Seguros Mercantil",
+  [HealthInsuranceEnum.PIRAMIDE]: "Seguros Pirámide",
+  [HealthInsuranceEnum.UNIVERSAL]: "Seguros Universales",
+  [HealthInsuranceEnum.ASEGURADORACATATUMBO]: "Aseguradora Catatumbo",
+  [HealthInsuranceEnum.ZURICH]: "Zurich Seguros",
+  [HealthInsuranceEnum.LAPREVISORA]: "La Previsora",
+  [HealthInsuranceEnum.VENEZUELA]: "Seguros Venezuela",
+  [HealthInsuranceEnum.HORIZONTE]: "Seguros Horizonte",
+  [HealthInsuranceEnum.PROVINCIAL]: "Seguros Provincial",
+  [HealthInsuranceEnum.ORINOCO]: "Seguros Orinoco",
+  [HealthInsuranceEnum.FEDERACIONMEDICA]: "Seguros Federación Médica Venezolana",
+  [HealthInsuranceEnum.QUALITAS]: "Qualitas Compañía de Seguros",
+  [HealthInsuranceEnum.OCEANICA]: "Seguros Oceánica",
+  [HealthInsuranceEnum.BOLIVAR]: "Seguros Bolívar"
 };

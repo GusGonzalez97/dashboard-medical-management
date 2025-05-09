@@ -60,7 +60,7 @@ function Calendar({ appointments }: CalendarProps): React.JSX.Element {
   const { isDoctor } = useAuth()
   const { _toast } = useToast()
   const router = useRouter()
-  const [invitedUser, setInvitedUser] = useState<PatientFormValue>({ name: '', lastname: '', documentNumber: '', healthInsuranceName: undefined, phone: '+54' })
+  const [invitedUser, setInvitedUser] = useState<PatientFormValue>({ name: '', lastname: '', documentNumber: '', healthInsuranceName: undefined, phone: '' })
   const [isPatient, setIsPatient] = useState(false)
 
   useEffect(() => {
@@ -395,9 +395,9 @@ function Calendar({ appointments }: CalendarProps): React.JSX.Element {
 
           {isPatient || isEditing ? (<TextField
             fullWidth
-            label="Documento"
+            label="Cédula"
             variant="outlined"
-            placeholder="Ingrese el DNI del paciente"
+            placeholder="Ingrese la cédula del paciente"
             value={eventData.patientDocument}
             onChange={(e) => { setEventData({ ...eventData, patientDocument: e.target.value }) }}
             margin="dense"
@@ -469,8 +469,8 @@ function Calendar({ appointments }: CalendarProps): React.JSX.Element {
             onChange={(e) => { setEventData({ ...eventData, branch: e.target.value }) }}
             margin="dense"
           >
-            <MenuItem value="Comodoro Rivadavia">Comodoro Rivadavia</MenuItem>
-            <MenuItem value="Caleta Olivia">Caleta Olivia</MenuItem>
+            <MenuItem value="Comodoro Rivadavia">CARACAS</MenuItem>
+            <MenuItem value="Caleta Olivia">VALENCIA</MenuItem>
           </TextField>
           <TextField
             fullWidth
