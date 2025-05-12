@@ -1,6 +1,7 @@
 import { config } from '@/config';
 import type { AuthCredentials } from '@/types/auth';
 import { createCookies, deleteCookies } from '@/utils/cookies';
+import axios from 'axios';
 import Axios, { type InternalAxiosRequestConfig } from 'axios';
 import Cookies from 'js-cookie';
 
@@ -12,6 +13,11 @@ const api = Axios.create({
     "Content-Type": "application/json",
   },
 });
+
+const plainAxios = axios.create({
+  baseURL: BASE_URL, 
+});
+
 const { TOKEN_KEY, REFRESH_TOKEN_KEY } = config;
 
 api.interceptors.request.use(
@@ -24,9 +30,9 @@ api.interceptors.request.use(
       return _config;
     }
     const refreshTokenCookie = Cookies.get(REFRESH_TOKEN_KEY);
-    if (refreshTokenCookie !== undefined) {
 
-      const res : {data: AuthCredentials}= await api.patch('/v1/auth/refresh',{refresh:refreshTokenCookie})
+    if (refreshTokenCookie !== undefined) {
+      const res : {data: AuthCredentials}= await plainAxios.patch('/v1/auth/refresh',{refresh:refreshTokenCookie})
       const { data } = res;
       if (data.jwt !== undefined) {
         if (_config && _config.headers) {
